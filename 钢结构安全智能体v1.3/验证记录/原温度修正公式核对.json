@@ -1,0 +1,125 @@
+{
+  "source": "C:\\Users\\小曾\\Desktop\\智能建造大赛\\钢结构安全智能体v1.2\\aegis_dashboard\\data\\商洛煤棚监测_应用数据 (1).xlsx",
+  "sha256": "d3bd5b02a72ed6bbd336d22e00cf06d2a139d083305972f7441762866a0e1919",
+  "formula": "应变变化值 + 0.2 × (温度 - 基准温度)",
+  "coefficient_ue_per_c": 0.2,
+  "points": {
+    "S1": {
+      "reference_temperature_c": 22.5,
+      "sensor_id": "0226026496",
+      "reference_temperature_unique": [
+        "22.5"
+      ],
+      "sensor_ids_unique": [
+        "0226026496"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 0.0
+    },
+    "S10": {
+      "reference_temperature_c": 22.5,
+      "sensor_id": "0226026494",
+      "reference_temperature_unique": [
+        "22.5"
+      ],
+      "sensor_ids_unique": [
+        "0226026494"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 1e-15
+    },
+    "S2": {
+      "reference_temperature_c": 23.1,
+      "sensor_id": "0226026497",
+      "reference_temperature_unique": [
+        "23.1"
+      ],
+      "sensor_ids_unique": [
+        "0226026497"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 1e-15
+    },
+    "S3": {
+      "reference_temperature_c": 22.6,
+      "sensor_id": "0226026474",
+      "reference_temperature_unique": [
+        "22.6"
+      ],
+      "sensor_ids_unique": [
+        "0226026474"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 0.0
+    },
+    "S5": {
+      "reference_temperature_c": 22.2,
+      "sensor_id": "0226026498",
+      "reference_temperature_unique": [
+        "22.2"
+      ],
+      "sensor_ids_unique": [
+        "0226026498"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 1e-16
+    },
+    "S6": {
+      "reference_temperature_c": 22.8,
+      "sensor_id": "0226026471",
+      "reference_temperature_unique": [
+        "22.8"
+      ],
+      "sensor_ids_unique": [
+        "0226026471"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 0.0
+    },
+    "S7": {
+      "reference_temperature_c": 22.2,
+      "sensor_id": "0226026495",
+      "reference_temperature_unique": [
+        "22.2"
+      ],
+      "sensor_ids_unique": [
+        "0226026495"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 0.0
+    },
+    "S8": {
+      "reference_temperature_c": 22.0,
+      "sensor_id": "0226026475",
+      "reference_temperature_unique": [
+        "22"
+      ],
+      "sensor_ids_unique": [
+        "0226026475"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 0.0
+    },
+    "S9": {
+      "reference_temperature_c": 22.6,
+      "sensor_id": "0226026473",
+      "reference_temperature_unique": [
+        "22.6"
+      ],
+      "sensor_ids_unique": [
+        "0226026473"
+      ],
+      "rows": 430,
+      "formulas_verified": true,
+      "max_cached_numeric_error": 0.0
+    }
+  }
+}

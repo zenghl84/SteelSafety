@@ -1,0 +1,64 @@
+{
+  "tabs": [
+    "实测快照",
+    "三维孪生",
+    "安全预测与预警",
+    "现场安全助手"
+  ],
+  "default_cards": 10,
+  "default_metric": "真实应变",
+  "missing_point": "S4",
+  "overview_version": "v1.3",
+  "default_prediction_peak_mpa": 1.3193,
+  "snapshot_and_twin_model_identical": true,
+  "points": {
+    "S1": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    },
+    "S10": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    },
+    "S2": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    },
+    "S3": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    },
+    "S5": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    },
+    "S6": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    },
+    "S7": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    },
+    "S8": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    },
+    "S9": {
+      "all_three_curves_match": true,
+      "records_per_curve": 49,
+      "details_match": true
+    }
+  },
+  "card_metric_switching_checked": true,
+  "S4_curves_show_missing_message": true,
+  "exceptions": []
+}

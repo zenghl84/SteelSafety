@@ -1,0 +1,249 @@
+{
+  "schema_version": 2,
+  "method": "应力增量 POD + 一维分段线性插值（非 Galerkin）",
+  "reference_stage": "CS13",
+  "stage": "CS18",
+  "load": "合计(CS)",
+  "step": "001(last)",
+  "stress_unit": "MPa",
+  "output": "同一工况下 CS18 − CS13 的梁端轴向应力增量 Δσ",
+  "strain_conversion": "轴向测点估算 Δε(με)=Δσ(MPa)/E(MPa)×10^6",
+  "parameter": "施工活荷载 / 施工荷载组18 / 节点荷载倍率",
+  "applicable_interval": [
+    0.8,
+    1.2
+  ],
+  "retained_rank": 1,
+  "numerical_rank": 2,
+  "captured_training_variation_energy": 0.9999027274640278,
+  "train_cases": [
+    "case_080",
+    "case_100",
+    "case_120"
+  ],
+  "test_cases": [
+    "case_090",
+    "case_110"
+  ],
+  "rows": 23838,
+  "created_at": "2026-09-27T01:42:33.548089+00:00",
+  "pod_fit_seconds": 0.0018756999634206295,
+  "predict_median_seconds": 5.819997750222683e-05,
+  "source_mgt_sha256": "00b2b7b8afe2d9ffe3c6e887725db966a3b60ac9d2693e24273a157e882871d5",
+  "training_projection": [
+    {
+      "rmse_mpa": 0.015585567107336832,
+      "relative_l2": 0.0008287711909893567,
+      "max_abs_error_mpa": 0.22093174425725692,
+      "worst_error_end": "2094_I",
+      "actual_min_mpa": -107.965,
+      "actual_max_mpa": 91.3,
+      "predicted_min_mpa": -108.12648397489554,
+      "predicted_max_mpa": 91.31491260080955,
+      "actual_peak_end": "2081_I",
+      "predicted_peak_end": "2081_I",
+      "actual_abs_peak_mpa": 107.965,
+      "predicted_abs_peak_mpa": 108.12648397489554,
+      "top10_end_overlap": 1.0,
+      "case_id": "case_080"
+    },
+    {
+      "rmse_mpa": 0.031208502230668445,
+      "relative_l2": 0.0015217770141574315,
+      "max_abs_error_mpa": 0.4423931953192266,
+      "worst_error_end": "2094_I",
+      "actual_min_mpa": -120.965,
+      "actual_max_mpa": 95.7,
+      "predicted_min_mpa": -120.64164487560592,
+      "predicted_max_mpa": 95.67013904387152,
+      "actual_peak_end": "2081_I",
+      "predicted_peak_end": "2081_I",
+      "actual_abs_peak_mpa": 120.965,
+      "predicted_abs_peak_mpa": 120.64164487560592,
+      "top10_end_overlap": 1.0,
+      "case_id": "case_100"
+    },
+    {
+      "rmse_mpa": 0.015622935123331592,
+      "relative_l2": 0.0006970548643292053,
+      "max_abs_error_mpa": 0.2214614510619981,
+      "worst_error_end": "2094_I",
+      "actual_min_mpa": -132.965,
+      "actual_max_mpa": 100.0,
+      "predicted_min_mpa": -133.12687114949853,
+      "predicted_max_mpa": 100.01494835531895,
+      "actual_peak_end": "2081_I",
+      "predicted_peak_end": "2081_I",
+      "actual_abs_peak_mpa": 132.965,
+      "predicted_abs_peak_mpa": 133.12687114949853,
+      "top10_end_overlap": 1.0,
+      "case_id": "case_120"
+    }
+  ],
+  "validation": [
+    {
+      "rmse_mpa": 0.042383319888194805,
+      "relative_l2": 0.002159495032159017,
+      "max_abs_error_mpa": 0.5896687787708803,
+      "worst_error_end": "4439_J",
+      "actual_min_mpa": -113.965,
+      "actual_max_mpa": 93.5,
+      "predicted_min_mpa": -114.38406442525073,
+      "predicted_max_mpa": 93.49252582234053,
+      "actual_peak_end": "2081_I",
+      "predicted_peak_end": "2081_I",
+      "actual_abs_peak_mpa": 113.965,
+      "predicted_abs_peak_mpa": 114.38406442525073,
+      "top10_end_overlap": 1.0,
+      "load_effect_relative_l2": 0.030855161324258557,
+      "case_id": "case_090",
+      "lambda_value": 0.9
+    },
+    {
+      "rmse_mpa": 0.05335751909837829,
+      "relative_l2": 0.0024887616252694633,
+      "max_abs_error_mpa": 0.6318184220707099,
+      "worst_error_end": "5877_I",
+      "actual_min_mpa": -126.965,
+      "actual_max_mpa": 97.9,
+      "predicted_min_mpa": -126.88425801255224,
+      "predicted_max_mpa": 97.84254369959524,
+      "actual_peak_end": "2081_I",
+      "predicted_peak_end": "2081_I",
+      "actual_abs_peak_mpa": 126.965,
+      "predicted_abs_peak_mpa": 126.88425801255224,
+      "top10_end_overlap": 1.0,
+      "load_effect_relative_l2": 0.03893027644326762,
+      "case_id": "case_110",
+      "lambda_value": 1.1
+    }
+  ],
+  "inputs": [
+    {
+      "file": "CS13_reference.xlsx",
+      "sheets": [
+        "梁单元应力"
+      ],
+      "rows": 23838,
+      "identical_duplicate_rows_removed": 0,
+      "inactive_endpoints_zero_filled": 0,
+      "missing_metadata_columns": [],
+      "unit": "MPa",
+      "stage": "CS13",
+      "load": "合计(CS)",
+      "step": "001(last)",
+      "sha256": "2d271c8cffb10e19f7305d86b071d530079bafd96ce4505cd5ffa3aaf2fbe1db",
+      "role": "所有倍率共用的 CS13 应力参考"
+    },
+    {
+      "file": "case_080_CS18.xlsx",
+      "sheets": [
+        "梁单元应力"
+      ],
+      "rows": 23838,
+      "identical_duplicate_rows_removed": 0,
+      "inactive_endpoints_zero_filled": 0,
+      "missing_metadata_columns": [],
+      "unit": "MPa",
+      "stage": "CS18",
+      "load": "合计(CS)",
+      "step": "001(last)",
+      "case_id": "case_080",
+      "sha256": "b5634e7adc4de9c0f62ccc3fea05c23db1b02236f94493f64d34826bd2ff3821",
+      "lambda_value": 0.8,
+      "split": "train"
+    },
+    {
+      "file": "case_100_CS18.xlsx",
+      "sheets": [
+        "梁单元应力"
+      ],
+      "rows": 23838,
+      "identical_duplicate_rows_removed": 0,
+      "inactive_endpoints_zero_filled": 0,
+      "missing_metadata_columns": [],
+      "unit": "MPa",
+      "stage": "CS18",
+      "load": "合计(CS)",
+      "step": "001(last)",
+      "case_id": "case_100",
+      "sha256": "05e77afa3b679c2c4ec4e9bf6b14b0126f6f0be2cf0569699e9c6665f570537a",
+      "lambda_value": 1.0,
+      "split": "train"
+    },
+    {
+      "file": "case_120_CS18.xlsx",
+      "sheets": [
+        "梁单元应力"
+      ],
+      "rows": 23838,
+      "identical_duplicate_rows_removed": 0,
+      "inactive_endpoints_zero_filled": 0,
+      "missing_metadata_columns": [],
+      "unit": "MPa",
+      "stage": "CS18",
+      "load": "合计(CS)",
+      "step": "001(last)",
+      "case_id": "case_120",
+      "sha256": "714c877ebaa3c58126ba24b27399f388dc57d59775467976092376554576162e",
+      "lambda_value": 1.2,
+      "split": "train"
+    },
+    {
+      "file": "case_090_CS18.xlsx",
+      "sheets": [
+        "梁单元应力"
+      ],
+      "rows": 23838,
+      "identical_duplicate_rows_removed": 0,
+      "inactive_endpoints_zero_filled": 0,
+      "missing_metadata_columns": [],
+      "unit": "MPa",
+      "stage": "CS18",
+      "load": "合计(CS)",
+      "step": "001(last)",
+      "case_id": "case_090",
+      "sha256": "413911960886198c9a82a33385f2a4b7c147de6e4c51f8c92fcaa545b3118903",
+      "lambda_value": 0.9,
+      "split": "test"
+    },
+    {
+      "file": "case_110_CS18.xlsx",
+      "sheets": [
+        "梁单元应力"
+      ],
+      "rows": 23838,
+      "identical_duplicate_rows_removed": 0,
+      "inactive_endpoints_zero_filled": 0,
+      "missing_metadata_columns": [],
+      "unit": "MPa",
+      "stage": "CS18",
+      "load": "合计(CS)",
+      "step": "001(last)",
+      "case_id": "case_110",
+      "sha256": "d7d0aee1c30f875ec1c333692935da9165edf0a53064bdad173082752caa2fcb",
+      "lambda_value": 1.1,
+      "split": "test"
+    }
+  ],
+  "limitations": [
+    "固定 CS13 基线和 CS18 施工历史；不是跨施工阶段的通用模型。",
+    "只预测 CS18−CS13 的轴向应力变化，且只覆盖已采样荷载倍率。",
+    "独立检验只覆盖列出的工况，不能据此自动确认结构安全。",
+    "34 个仅受拉单元保留在 MIDAS 分析内，其应力不属于本梁端输出。",
+    "S7/S8 的映射标为弯曲测点，轴向应力除以 E 不能代表其弯曲表面应变。"
+  ],
+  "bundled_historical_baseline_provenance": {
+    "source": "MIDAS_POD_matrix.xlsx, columns CS13 and CS18; paired by element and I/J end",
+    "source_sha256": "ed523f1fe223f8a2e08dbfde11aaaa97f7d1779b956e64028fb3129fd3eb6db2",
+    "output_rows": 23838,
+    "beams": 11919,
+    "CS13_active_beams": 7317,
+    "CS18_active_beams": 11919,
+    "baseline_definition": "Per beam end, delta_stress_mpa = CS18 - CS13; inactive-at-CS13 elements have zero reference stress according to model activation.",
+    "source_precision": "Existing source matrix is rounded to 0.1 MPa.",
+    "source_metadata": "Load/step were not present in consolidated matrix; these fields use prior user-confirmed workflow (合计(CS), 001(last)). Re-exported MIDAS tables remain recommended.",
+    "measured_point_activation": "All nine mapped sensor elements are active in CS13 and CS18.",
+    "sensor_warning": "The current mapping classifies S7/S8 as bending. Axial stress/E conversion is not a bending surface-strain prediction."
+  }
+}

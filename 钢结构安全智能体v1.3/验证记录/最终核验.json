@@ -1,0 +1,27 @@
+{
+  "version": "v1.3",
+  "v1_2_source": "C:\\Users\\小曾\\Desktop\\智能建造大赛\\钢结构安全智能体v1.2",
+  "v1_2_files_verified": 149,
+  "v1_2_changed_files": [],
+  "v1_2_file_set_unchanged": true,
+  "source_workbook": "C:\\Users\\小曾\\Downloads\\商洛煤棚监测_应用数据.xlsx",
+  "source_workbook_sha256": "54b577a9532fd8f3e361e9af4c7c3de18cac71275dc49167a267579c3eb1229a",
+  "packaged_workbook": "C:\\Users\\小曾\\Desktop\\智能建造大赛\\钢结构安全智能体v1.3\\aegis_dashboard\\data\\商洛煤棚监测_应用数据.xlsx",
+  "packaged_workbook_identical": true,
+  "calculated_records": 2322,
+  "original_formula": "应变变化值 + 0.2 ×（温度 - 各测点原基准温度）",
+  "original_formulas_verified": 3870,
+  "point_count": 9,
+  "missing_points": [
+    "S4"
+  ],
+  "latest_record": "2026-10-12 00:17:26",
+  "recent_three_days": "2026-10-10～2026-10-12",
+  "records_per_available_point_in_recent_three_days": 49,
+  "v1_2_styles_and_fonts_preserved": true,
+  "launcher_scripts_unchanged": true,
+  "preview_url": "http://127.0.0.1:8504/",
+  "browser_record": "浏览器界面检查.json",
+  "data_record": "监测数据核对.json",
+  "interface_record": "界面数据检查.json"
+}

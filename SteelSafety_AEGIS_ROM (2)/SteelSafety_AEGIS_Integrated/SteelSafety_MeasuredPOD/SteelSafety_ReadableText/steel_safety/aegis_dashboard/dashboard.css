@@ -1,0 +1,72 @@
+/* All added styles are confined to the monitoring dashboard. */
+.st-key-aegis_dashboard {
+ background:linear-gradient(180deg,#020812,#071522 52%,#040d17);
+ padding:14px 16px; border-radius:8px;
+}
+.st-key-aegis_dashboard,
+.st-key-aegis_dashboard [data-testid="stVerticalBlock"] {gap:0.9rem;}
+.st-key-aegis_dashboard .hero,
+.st-key-aegis_dashboard .metric-card,
+.st-key-aegis_dashboard .realtime-strip,
+.st-key-aegis_dashboard [data-testid="stSelectbox"] {
+ font-family:"Times New Roman","Microsoft YaHei","SimSun",serif!important;
+}
+.st-key-aegis_dashboard [data-baseweb="select"] > div {
+ background:#f0f2f6!important;color:#31333f!important;border-color:#d5d9df!important;
+}
+.st-key-aegis_dashboard [data-baseweb="select"] svg {color:#31333f!important;}
+.st-key-aegis_dashboard .hero{
+  position:relative;
+  padding:12px 20px 14px 20px;
+  margin-bottom:8px;
+  background:linear-gradient(90deg,rgba(8,39,67,.98),rgba(4,18,33,.96));
+  border-top:1px solid rgba(89,226,255,.46);
+  border-bottom:1px solid rgba(89,226,255,.24);
+  box-shadow:inset 0 0 30px rgba(45,178,235,.05),0 8px 24px rgba(0,0,0,.17);
+  clip-path:polygon(0 0,97.4% 0,100% 31%,100% 100%,2.2% 100%,0 68%);
+}
+.st-key-aegis_dashboard .brand{font-size:30px;font-weight:900;letter-spacing:1.3px;color:#f1fbff}
+.st-key-aegis_dashboard .brand b{color:#4edcff}
+.st-key-aegis_dashboard .brand-cn{margin-left:10px;color:#dff6ff;font-size:18px;font-weight:750}
+.st-key-aegis_dashboard .subtitle{color:#70c5ea;font-size:11px;letter-spacing:1px;margin-top:2px}
+.st-key-aegis_dashboard .hero-time{
+  position:absolute;right:22px;top:14px;text-align:right;font-size:11px;color:#b9ebfa
+}
+.st-key-aegis_dashboard .online{
+  display:inline-block;width:8px;height:8px;border-radius:50%;
+  background:#36e5a3;box-shadow:0 0 10px #36e5a3;margin-right:6px
+}
+.st-key-aegis_dashboard .metric-card{
+  min-height:84px;padding:9px 11px;
+  border:1px solid rgba(78,220,255,.19);border-radius:8px;
+  background:linear-gradient(180deg,rgba(11,43,72,.82),rgba(7,27,47,.92));
+  box-shadow:inset 0 0 18px rgba(78,220,255,.025),0 4px 13px rgba(0,0,0,.13);
+}
+.st-key-aegis_dashboard .m-label{font-size:10.5px;color:#80a7bb}
+.st-key-aegis_dashboard .m-value{font-size:21px;font-weight:850;color:#f2fbff;margin-top:2px}
+.st-key-aegis_dashboard .m-foot{font-size:10.5px;margin-top:2px}
+.st-key-aegis_dashboard .warn{color:#ffb547}
+.st-key-aegis_dashboard .realtime-strip{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 18px;
+  align-items:center;
+  margin:0 0 8px 0;
+  padding:7px 11px;
+  border:1px solid rgba(78,220,255,.16);
+  border-radius:6px;
+  background:rgba(5,26,45,.58);
+  font-size:11px;
+  color:#a9cede;
+}
+.st-key-aegis_dashboard .realtime-dot{
+  display:inline-block;
+  width:7px;height:7px;border-radius:50%;
+  background:#36e5a3;
+  box-shadow:0 0 9px #36e5a3;
+  margin-right:5px;
+}
+.st-key-aegis_dashboard .realtime-off{
+  background:#78909c;
+  box-shadow:none;
+}

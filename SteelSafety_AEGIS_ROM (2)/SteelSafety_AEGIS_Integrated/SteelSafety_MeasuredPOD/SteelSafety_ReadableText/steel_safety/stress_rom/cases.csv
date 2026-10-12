@@ -1,0 +1,6 @@
+﻿case_id,lambda_value,split,result_base,reference_base,midas_file
+case_080,0.8,train,results/case_080_CS18,results/CS13_reference,midas_cases/case_080.mgt
+case_100,1.0,train,results/case_100_CS18,results/CS13_reference,midas_cases/case_100.mgt
+case_120,1.2,train,results/case_120_CS18,results/CS13_reference,midas_cases/case_120.mgt
+case_090,0.9,test,results/case_090_CS18,results/CS13_reference,midas_cases/case_090.mgt
+case_110,1.1,test,results/case_110_CS18,results/CS13_reference,midas_cases/case_110.mgt

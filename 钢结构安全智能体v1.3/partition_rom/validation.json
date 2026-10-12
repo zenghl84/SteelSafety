@@ -1,0 +1,81 @@
+{
+  "method": "轴向应力 POD + 二参数仿射系数回归",
+  "rank": 2,
+  "training": [
+    [
+      0.8,
+      1.0
+    ],
+    [
+      1.2,
+      1.0
+    ],
+    [
+      1.0,
+      0.8
+    ],
+    [
+      1.0,
+      1.2
+    ]
+  ],
+  "independent_test": [
+    [
+      0.9,
+      1.1
+    ],
+    [
+      1.1,
+      0.9
+    ]
+  ],
+  "validation": [
+    {
+      "A": 0.9,
+      "B": 1.1,
+      "rmse_mpa": 4.7363403451815075e-05,
+      "max_error_mpa": 0.0005000000662391813,
+      "relative_l2": 1.4341944904348285e-06,
+      "load_effect_relative_l2": 0.00045993318884621546
+    },
+    {
+      "A": 1.1,
+      "B": 0.9,
+      "rmse_mpa": 4.8954502865792436e-05,
+      "max_error_mpa": 0.000500000066267603,
+      "relative_l2": 1.4824218047050523e-06,
+      "load_effect_relative_l2": 0.0004753850021734354
+    }
+  ],
+  "domain": "|A-1|+|B-1|<=0.2",
+  "stage": "CS18",
+  "unit": "MPa",
+  "geometry_sha256": "00b2b7b8afe2d9ffe3c6e887725db966a3b60ac9d2693e24273a157e882871d5",
+  "provenance": "几何端部已核对；分区荷载 MGT 未提供，倍率取自文件名，荷载定义尚待核验。",
+  "sources": [
+    {
+      "file": "X_A080_B100_CS18.xls",
+      "sha256": "463da226f2b7c39b586e1edd4c782947e25ad41f467ed79d8d375c5e61a2bc63"
+    },
+    {
+      "file": "X_A120_B100_CS18.xls",
+      "sha256": "6ee8bee5a5c54ec69a451fad29ee8c2d2afa8da8c21fa6251353811e39c8c2c6"
+    },
+    {
+      "file": "X_A100_B080_CS18.xls",
+      "sha256": "ca85812945ddc90ba42f9ed732f038a85f52e63243f51e0707948c88f2fc9352"
+    },
+    {
+      "file": "X_A100_B120_CS18.xls",
+      "sha256": "21a4e175e73c98de6af9e6a7b577d5e41c32f2df32f0cecbf509477f5c5cb3b7"
+    },
+    {
+      "file": "X_A090_B110_CS18.xls",
+      "sha256": "d07bf925abffa2b9f69617328f8d6626bee91c100ea55a350b1773b4a4da61a5"
+    },
+    {
+      "file": "X_A110_B090_CS18.xls",
+      "sha256": "e810321bcd0e8c37ded7f213890dfad450b13dcd20327d0dab9bcb46aec67edc"
+    }
+  ]
+}
