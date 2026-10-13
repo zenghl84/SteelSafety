@@ -1,0 +1,60 @@
+:root {
+  --steel-background:#ffffff;
+  --steel-text:#172b4d;
+  --steel-muted:#52657f;
+  --steel-border:#dbe4ee;
+  --steel-accent:#176ac4;
+  color-scheme:light;
+}
+html,body,.stApp,[data-testid="stAppViewContainer"],
+[data-testid="stMain"],[data-testid="stHeader"] {
+  background:var(--steel-background);
+  color:var(--steel-text);
+  color-scheme:light;
+}
+[data-testid="stMainBlockContainer"] {padding-top:3.5rem;padding-bottom:1.5rem}
+[data-testid="stMainBlockContainer"] > [data-testid="stVerticalBlock"] {gap:1rem}
+[data-testid="stSidebar"] {
+  background:var(--steel-background);color:var(--steel-text);
+  border-right:1px solid var(--steel-border);
+}
+h1,h2,h3,h4,h5,h6 {color:var(--steel-text)!important}
+h1 {letter-spacing:1px}
+[data-testid="stMarkdownContainer"],[data-testid="stWidgetLabel"],
+[data-testid="stMetricLabel"],[data-testid="stMetricValue"] {color:var(--steel-text)}
+[data-testid="stCaptionContainer"] {color:var(--steel-muted)!important;opacity:1!important}
+[data-testid="stMetric"] {
+  background:var(--steel-background);border:1px solid var(--steel-border);
+  border-radius:12px;padding:16px;
+}
+[data-baseweb="tab"] {color:var(--steel-muted)!important}
+[data-baseweb="tab"][aria-selected="true"] {color:var(--steel-accent)!important}
+[data-baseweb="input"],[data-baseweb="base-input"],
+[data-baseweb="select"] > div {
+  background:var(--steel-background)!important;color:var(--steel-text)!important;
+  border-color:var(--steel-border)!important;
+}
+input,textarea {color:var(--steel-text)!important;-webkit-text-fill-color:var(--steel-text)!important;caret-color:var(--steel-accent)}
+input::placeholder,textarea::placeholder {color:#64748b!important;-webkit-text-fill-color:#64748b!important}
+[data-baseweb="select"] svg {color:var(--steel-muted)!important}
+[data-baseweb="popover"],[role="listbox"],[role="option"] {
+  background:var(--steel-background)!important;color:var(--steel-text)!important;
+}
+[role="option"][aria-selected="true"] {background:#eaf3ff!important;color:#145ba1!important}
+[data-testid="stFileUploaderDropzone"] {
+  background:var(--steel-background)!important;color:var(--steel-text)!important;
+  border:1px dashed #aabdd1;
+}
+[data-testid="stBaseButton-secondary"] {
+  background:var(--steel-background)!important;color:#145ba1!important;border-color:#bfd0e3!important;
+}
+[data-testid="stBaseButton-secondary"]:hover {background:#eef5fd!important;border-color:var(--steel-accent)!important}
+[data-testid="stExpander"] {border-color:var(--steel-border)}
+[data-testid="stCode"] {background:#f5f7fa!important;color:var(--steel-text)!important}
+[data-testid="stCode"] pre,[data-testid="stCode"] code {color:var(--steel-text)}
+[data-testid="stChatMessage"] {background:#f5f8fc;color:var(--steel-text)}
+[data-testid="stChatInput"] {background:var(--steel-background)!important;border:1px solid var(--steel-border)!important;border-radius:8px}
+[data-testid="stChatInput"] textarea {background:var(--steel-background)!important}
+[data-testid="stBottom"],[data-testid="stBottomBlockContainer"] {background:var(--steel-background)}
+[data-testid="stAlert"] {color:var(--steel-text)}
+[data-testid="stMarkdownContainer"] a {color:#145ba1}

@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "实测快照",
+    "安全预测与预警",
+    "现场安全助手",
+    "三维孪生"
+  ],
+  "computed": {
+    "app": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(23, 43, 77)"
+    },
+    "caption": {
+      "background": "rgba(0, 0, 0, 0)",
+      "text": "rgb(82, 101, 127)"
+    },
+    "metric": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(23, 43, 77)"
+    },
+    "sidebar": {
+      "background": "rgb(255, 255, 255)",
+      "text": "rgb(23, 43, 77)"
+    }
+  },
+  "caption_opacity": "1",
+  "model_ready": "true",
+  "console_errors": [],
+  "screenshot": "白色主题-完整三维界面.jpg"
+}

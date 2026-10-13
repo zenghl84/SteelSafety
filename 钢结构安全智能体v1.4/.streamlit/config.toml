@@ -1,0 +1,12 @@
+[server]
+enableStaticServing = true
+
+[theme]
+base = "light"
+primaryColor = "#176AC4"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F5F7FA"
+textColor = "#172B4D"
+font = "Steel Interface, Times New Roman, Microsoft YaHei, serif"
+headingFont = "Steel Interface, Times New Roman, Microsoft YaHei, serif"
+codeFont = "Steel Interface, Times New Roman, Microsoft YaHei, serif"

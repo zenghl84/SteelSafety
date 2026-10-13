@@ -1,0 +1,130 @@
+{
+  "removed_material": "MAT-WIRE16-FC",
+  "source_material_name": "MAT_WIRE16_FC",
+  "removed_members": 34,
+  "cases": [
+    {
+      "case": "默认完整模型",
+      "snapshot_matches_twin": true,
+      "other_charts_unchanged": true
+    },
+    {
+      "case": "查询隐藏杆件 11920 不会重新绘出",
+      "snapshot_matches_twin": true,
+      "other_charts_unchanged": true
+    },
+    {
+      "case": "普通杆件仍可高亮",
+      "snapshot_matches_twin": true,
+      "other_charts_unchanged": true
+    },
+    {
+      "case": "按单元类型着色",
+      "snapshot_matches_twin": true,
+      "other_charts_unchanged": true
+    },
+    {
+      "case": "仅筛选 MAT_WIRE16_FC 时模型为空",
+      "snapshot_matches_twin": true,
+      "other_charts_unchanged": true
+    },
+    {
+      "case": "CS13 施工阶段",
+      "snapshot_matches_twin": true,
+      "other_charts_unchanged": true
+    },
+    {
+      "case": "恢复默认视图",
+      "snapshot_matches_twin": true,
+      "other_charts_unchanged": true
+    }
+  ],
+  "default_displayed_members": 11919,
+  "remaining_geometry_and_sensor_traces_match_original": true,
+  "sensor_count": 9,
+  "all_stages_and_both_color_modes": [
+    {
+      "stage": "完整模型",
+      "displayed_members": 11919
+    },
+    {
+      "stage": "CS1",
+      "displayed_members": 774
+    },
+    {
+      "stage": "CS4",
+      "displayed_members": 1164
+    },
+    {
+      "stage": "CS5",
+      "displayed_members": 1941
+    },
+    {
+      "stage": "CS6",
+      "displayed_members": 2613
+    },
+    {
+      "stage": "CS7",
+      "displayed_members": 3285
+    },
+    {
+      "stage": "CS8",
+      "displayed_members": 3957
+    },
+    {
+      "stage": "CS9",
+      "displayed_members": 4629
+    },
+    {
+      "stage": "CS10",
+      "displayed_members": 5301
+    },
+    {
+      "stage": "CS11",
+      "displayed_members": 5973
+    },
+    {
+      "stage": "CS12",
+      "displayed_members": 6645
+    },
+    {
+      "stage": "CS13",
+      "displayed_members": 7317
+    },
+    {
+      "stage": "CS14",
+      "displayed_members": 7989
+    },
+    {
+      "stage": "CS15",
+      "displayed_members": 8661
+    },
+    {
+      "stage": "CS16",
+      "displayed_members": 9330
+    },
+    {
+      "stage": "CS17",
+      "displayed_members": 10380
+    },
+    {
+      "stage": "CS18",
+      "displayed_members": 11919
+    },
+    {
+      "stage": "CS19",
+      "displayed_members": 11919
+    }
+  ],
+  "source_model_and_other_tab_files_unchanged": true,
+  "prediction_cloud_identical_to_before": true,
+  "exceptions": [],
+  "browser_check": {
+    "url": "http://127.0.0.1:8501/",
+    "both_tabs_checked": true,
+    "current_visible_members": 11919,
+    "wire_material_absent_from_both_legends": true,
+    "plot_export": "MAT-WIRE16-FC去除后模型.png",
+    "twin_page_screenshot": "MAT-WIRE16-FC三维孪生页面.jpg"
+  }
+}

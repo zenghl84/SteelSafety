@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{font-family:"Microsoft YaHei","Times New Roman",serif;color:#263c53;background:#ffffff}
+#viewer{position:relative;width:100%;height:650px;background:#ffffff;border:1px solid #cddae7;border-radius:12px;overflow:hidden}
+#viewport{position:absolute;inset:0}canvas{display:block;width:100%;height:100%;touch-action:none;outline:none}
+.topbar{position:absolute;z-index:3;top:14px;left:16px;right:16px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px;pointer-events:none}
+.heading{border-left:3px solid #2587c6;padding-left:10px;min-width:150px}.heading b{display:block;font-size:16px;letter-spacing:.5px}.heading small{display:block;font-size:11px;color:#52657f;margin-top:5px}
+.toolbar{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:5px;pointer-events:auto}
+.toolbar button{height:30px;padding:0 10px;border:1px solid #c8d7e5;border-radius:6px;color:#315474;background:#ffffffde;cursor:pointer;font:12px "Microsoft YaHei",serif;box-shadow:0 2px 8px #324c6510}
+.toolbar button:hover,.toolbar button.active{background:#e0effc;border-color:#68a7d4;color:#1166a1}
+.foot{position:absolute;bottom:14px;left:16px;right:16px;z-index:3;display:flex;justify-content:space-between;gap:12px;align-items:flex-end;pointer-events:none;font-size:11px;color:#52657f}
+.chip{background:#ffffffd9;border:1px solid #d2dfea;padding:7px 10px;border-radius:6px;color:#365b78;box-shadow:0 2px 8px #2d466c08}
+#legend{display:flex;gap:12px;flex-wrap:wrap}#legend span{white-space:nowrap}#legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+#loading{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font-size:13px;z-index:5;background:#fffffff0;padding:30px;line-height:1.9}
+#empty{position:absolute;inset:0;display:none;place-items:center;font-size:14px;z-index:2;color:#758ba0}
+#sensor-layer{position:absolute;inset:0;pointer-events:none;z-index:2}.sensor-pin{position:absolute;pointer-events:auto;width:15px;height:15px;padding:0;background:#0e8298;border:3px solid white;border-radius:50%;box-shadow:0 0 0 1px #168b9ca8,0 2px 8px #168b9c4d;cursor:pointer;transform:translate(-50%,-50%)}
+.sensor-pin span{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);padding:3px 6px;background:#ffffffef;border:1px solid #c8dce6;border-radius:4px;color:#15536e;font:600 11px "Times New Roman",serif;white-space:nowrap;box-shadow:0 1px 5px #213a5620}
+.sensor-pin:hover{background:#f29a47;box-shadow:0 0 0 3px #f29a4740}
+#tooltip{position:absolute;display:none;z-index:8;max-width:min(380px,90%);font-size:12px;line-height:1.8;color:#273e55;background:#fffffff5;border:1px solid #b7cfdf;border-radius:8px;padding:11px 14px;box-shadow:0 7px 28px #28496325;pointer-events:none}
+#selection{position:absolute;top:58px;right:16px;z-index:3;display:none;color:#9b6223;font-size:12px;background:#fff5e6ed;border:1px solid #e8c28e;border-radius:6px;padding:8px 10px;pointer-events:none}
+#export-preview{position:absolute;inset:0;z-index:9;background:#ffffff;padding:12px;display:flex;flex-direction:column;gap:10px}#export-preview[hidden]{display:none}.export-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12px}.export-actions div{display:flex;gap:8px}.export-actions a,.export-actions button{padding:7px 12px;border-radius:6px;border:1px solid #b5ccdf;background:white;color:#246b9c;text-decoration:none;font:12px "Microsoft YaHei",serif;cursor:pointer}#export-image{width:100%;min-height:0;flex:1;object-fit:contain;background:#ffffff;border:1px solid #cfdeea;border-radius:6px}
+@media(max-width:560px){.topbar{top:12px;left:12px;right:12px;flex-wrap:wrap}.heading b{font-size:14px}.toolbar{gap:4px}.toolbar button{padding:0 8px;font-size:11px}.foot{left:12px;right:12px}.hint{display:none}#selection{top:98px;font-size:11px}}
+</style>
+</head>
+<body>
+<div id="viewer" data-render-kind="solid" data-view-key="__VIEW_KEY__">
+  <div id="viewport"></div>
+  <div class="topbar"><div class="heading"><b>三维钢结构模型</b><small id="model-meta">MGT · 实体钢管</small></div>
+    <div class="toolbar" aria-label="模型视图工具">
+      <button data-view="perspective" class="active">斜视</button><button data-view="top">俯视</button><button data-view="front">正视</button><button id="reset">复位</button><button id="export">导出图片</button>
+    </div>
+  </div>
+  <div id="selection"></div><div id="sensor-layer"></div><div id="tooltip" role="tooltip"></div>
+  <div class="foot"><div class="chip" id="legend"></div><div class="hint">拖动旋转 · 滚轮缩放 · 右键平移</div></div>
+  <div id="loading" role="status">正在构建实体钢管模型…</div><div id="empty">当前筛选范围内没有可显示的杆件</div>
+  <div id="export-preview" role="dialog" aria-label="模型图片预览" hidden><div class="export-actions"><b>模型图片预览</b><div><a id="save-image" download="钢结构实体模型.png">保存 PNG 图片</a><button id="close-preview">返回模型</button></div></div><img id="export-image" alt="钢结构实体模型及测点编号"></div>
+</div>
+<script id="steel-scene-data" type="application/json">__SCENE_DATA__</script>
+<script id="steel-module-data" type="application/json">__BUNDLED_MODULES__</script>
+<script type="module">__VIEWER_RUNTIME__</script>
+</body>
+</html>

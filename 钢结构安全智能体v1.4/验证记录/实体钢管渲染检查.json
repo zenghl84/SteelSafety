@@ -1,0 +1,82 @@
+{
+  "engine": "Three.js 0.180.0 (bundled offline)",
+  "cases": [
+    {
+      "case": "默认实体钢管",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 11919,
+      "sensors": 9
+    },
+    {
+      "case": "查询被排除杆件",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 11919,
+      "sensors": 9
+    },
+    {
+      "case": "普通杆件高亮",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 11919,
+      "sensors": 9
+    },
+    {
+      "case": "真实外径倍率",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 11919,
+      "sensors": 9
+    },
+    {
+      "case": "放大显示倍率",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 11919,
+      "sensors": 9
+    },
+    {
+      "case": "关闭节点示意",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 11919,
+      "sensors": 9
+    },
+    {
+      "case": "关闭测点",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 11919,
+      "sensors": 0
+    },
+    {
+      "case": "CS13阶段",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 7317,
+      "sensors": 9
+    },
+    {
+      "case": "仅筛选已排除材料",
+      "both_model_scenes_identical": true,
+      "other_charts_match_before": true,
+      "members": 0,
+      "sensors": 0
+    },
+    {
+      "case": "兼容线框视图",
+      "both_model_figures_identical": true
+    }
+  ],
+  "default_members": 11919,
+  "pipe_sections": 18,
+  "diameter_range_mm": [
+    75.5,
+    219
+  ],
+  "geometry_coordinates_and_connectivity_unchanged": true,
+  "sensor_positions_and_original_hover_data_unchanged": true,
+  "source_models_training_data_and_other_tab_code_unchanged": true,
+  "exceptions": []
+}
