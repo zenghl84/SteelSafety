@@ -1,0 +1,29 @@
+{
+  "version": "key-indicators-v0.1",
+  "default_mode": "demo",
+  "demo_authorization": "用户选择增加明确标注的演示参数模式",
+  "review_rule": "每个故障、缺测或触发现有应力关注规则的测点计 1 项，同一测点不重复计数。",
+  "scenario": {
+    "deflection": {
+      "node_displacements_mm": [0, -18.6, 0],
+      "reference_displacement_mm": 0,
+      "note": "三个虚拟示意节点；支座基准取零。不是本项目 MIDAS 节点或位移结果。"
+    },
+    "fatigue": {
+      "cycles": 120000,
+      "assumed_cycles_to_failure": 1000000,
+      "note": "单级应力谱的演示假设；循环数与容许循环数均非监测结果，未指定项目 S-N 曲线。"
+    },
+    "corrosion": {
+      "initial_thickness_mm": 6.0,
+      "remaining_thickness_mm": 5.8,
+      "display_grade_limits": [0.05, 0.10, 0.20],
+      "note": "平台演示分级：厚度损失率≤5%为1级，>5%～10%为2级，>10%～20%为3级，>20%为4级；不是规范腐蚀分级。"
+    },
+    "life": {
+      "assumed_design_years": 50,
+      "assumed_elapsed_years": 10,
+      "note": "仅演示计划年限余量，50与10年均为场景假设，不是项目档案或鉴定结果。"
+    }
+  }
+}

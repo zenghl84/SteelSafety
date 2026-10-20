@@ -1,0 +1,62 @@
+<div id="assessment-workspace" hidden>
+  <div class="sa-toolbar">
+    <div><h3>测点应力评分</h3><p>CS18 安装初值 + 实测增量 · 9 个已确认测点</p></div>
+    <div class="sa-actions">
+      <label for="assessment-source">数据来源</label>
+      <select id="assessment-source" aria-label="评分数据来源">
+        <option value="confirmed">已确认评分表</option>
+        <option value="monitoring">最新监测记录</option>
+      </select>
+      <button id="assessment-export" type="button">导出计算表</button>
+    </div>
+  </div>
+  <div class="sa-metrics">
+    <article class="sa-control-card" id="assessment-reference-card" data-tone="muted"><small>平均参考分 · 原映射口径</small><strong><span id="assessment-mean-score">—</span><em> / 100</em></strong><span id="assessment-mean-basis">沿用原表映射平均分</span></article>
+    <article><small>有效测点均分</small><strong><span id="assessment-valid-mean-score">—</span><em> / 100</em></strong><span>剔除损坏及缺测传感器</span></article>
+    <article><small>有效评分覆盖</small><strong id="assessment-coverage">—</strong><span id="assessment-coverage-note">损坏设备与缺测单独记录</span></article>
+    <article><small>故障测点</small><strong id="assessment-fault-sensors">—</strong><span id="assessment-status">等待计算</span></article>
+  </div>
+  <div id="assessment-notice" class="sa-notice" role="status" data-tone="muted"></div>
+  <section class="sa-card">
+    <div class="sa-card-heading"><h3>逐点评分与计算</h3><span id="assessment-data-caption"></span></div>
+    <div class="sa-table-scroll"><table class="sa-table" id="assessment-table">
+      <thead><tr><th>测点</th><th>单元 / 端面</th><th>钢材</th><th>CS18 初值<small>MPa</small></th><th>实测增量<small>MPa</small></th><th>估计总应力<small>MPa</small></th><th>材料基准 f<small>MPa</small></th><th>应力占用比</th><th>参考评分</th><th>状态</th></tr></thead>
+      <tbody id="assessment-rows"></tbody>
+    </table></div>
+    <p id="assessment-time-note" class="sa-note"></p>
+  </section>
+  <div class="sa-rules" id="assessment-rules">
+    <section class="sa-card">
+      <h3>计算方法</h3>
+      <ol class="sa-steps">
+        <li><b>先叠加应力</b><span>估计总应力 σ = CS18 初值 + 安装后的实测应力增量，保留正负号。</span></li>
+        <li><b>再计算占用比</b><span>r = |σ| ÷ f；Q235B 取 215 MPa，Q355B 取 305 MPa。</span></li>
+        <li><b>映射为分数</b><span>首页显示原映射平均参考分；有效测点均分剔除损坏设备与缺测，分数越高表示应力占用越低。</span></li>
+      </ol>
+      <p class="sa-note">S1 已由用户标记为传感器损坏，原读数及原映射 0 分保留。在“已确认评分表”中，首页 82.4 为原表 9 点参考均分，有效 8 点均分为 92.7。S7、S8 正常参与评分；S4 未纳入本组。</p>
+    </section>
+    <section class="sa-card">
+      <h3>评分规则 <small>项目暂定</small></h3>
+      <table class="sa-rule-table"><tbody>
+        <tr><th>r ≤ 50%</th><td>100 分</td><td>占用较低</td></tr>
+        <tr><th>50% &lt; r ≤ 90%</th><td>150 − 100r</td><td>70% 为 80 分，90% 为 60 分</td></tr>
+        <tr><th>90% &lt; r &lt; 100%</th><td>600 × (1 − r)</td><td>临近材料基准，预警</td></tr>
+        <tr><th>r ≥ 100%</th><td>0 分</td><td>超限待核验</td></tr>
+      </tbody></table>
+      <p class="sa-note">公式中的 r 使用小数；占用比超过 70% 显示“关注”。缺测留空；超限保留原值并提示核验。</p>
+    </section>
+  </div>
+  <p class="sa-basis">本页为材料应力参考评分，分数映射是项目规则。材料强度取值参考
+    <a href="https://gf.cabr-fire.com/m/article-39049.htm" target="_blank" rel="noopener">GB 55006—2021 第 3.0.3 条及条文说明表 2</a>；
+    受压稳定性、连接和疲劳尚需另行验算，正式监测控制值应按
+    <a href="https://gf.cabr-fire.com/m/article-55822.htm" target="_blank" rel="noopener">GB 50982—2014 第 3.4.5 条</a>结合工程条件核定。
+  </p>
+  <section class="sa-card key-sources" id="key-indicator-sources" tabindex="-1" aria-labelledby="key-indicator-sources-title">
+    <div class="key-sources-heading">
+      <div><h3 id="key-indicator-sources-title">关键指标与来源</h3><p id="key-indicator-source-label"></p></div>
+      <div class="sa-actions"><label for="key-indicator-mode-detail">指标模式</label><select id="key-indicator-mode-detail"><option value="observed">现有数据</option><option value="demo">演示参数</option></select><button id="key-indicator-export" type="button">导出来源说明</button></div>
+    </div>
+    <p id="key-indicator-mode-note" class="key-mode-note"></p>
+    <div id="key-indicator-source-cards"></div>
+  </section>
+</div>

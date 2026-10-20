@@ -1,0 +1,41 @@
+# Local Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local archives, generated reports and runtime files
+.local/
+.logs/
+tmp/
+outputs/
+build/
+dist/
+*.egg-info/
+*.log
+*.rar
+*.zip
+*.7z
+*.tar.gz
+~$*
+
+# Personal configuration and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Optional resources retained locally; see THIRD_PARTY_NOTICES.md
+/static/knowledge/*.pdf
+/assets/home/yahei-*.ttf

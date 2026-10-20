@@ -1,0 +1,101 @@
+[
+  {
+    "title": "钢结构工程施工规范GB50755-2012",
+    "code": "GB 50755-2012",
+    "category": "本地规范",
+    "url": "/app/static/knowledge/钢结构工程施工规范GB50755-2012.pdf",
+    "location": "第15.2.5～15.2.9条；PDF第81～82页",
+    "summary": "异常数据需复测确认；结构响应宜同步观测温度、风力。本次临时筛查不等同规范安全限值。",
+    "status": "已核对相关条文"
+  },
+  {
+    "title": "钢结构工程施工质量验收标准GB50205-2020",
+    "code": "GB 50205-2020",
+    "category": "本地规范",
+    "url": "/app/static/knowledge/钢结构工程施工质量验收标准GB50205-2020.pdf",
+    "location": "施工质量验收参考",
+    "summary": "用于钢结构施工质量验收；不将验收允许偏差直接当作传感器应变报警值。",
+    "status": "扫描件已收录，尚未逐条OCR核验"
+  },
+  {
+    "title": "钢结构设计标准(GB 50017—2017)",
+    "code": "GB 50017-2017",
+    "category": "本地规范",
+    "url": "/app/static/knowledge/钢结构设计标准(GB 50017—2017).pdf",
+    "location": "第4.4.8条；PDF第45页",
+    "summary": "包含钢材物理性能参数；现有应变变化值不能脱离初始应力、温度、材料和受力模型直接判断承载安全。",
+    "status": "已核对物理性能表"
+  },
+  {
+    "title": "钢结构通用规范GB 55006-2021",
+    "code": "GB 55006-2021",
+    "category": "本地规范",
+    "url": "/app/static/knowledge/钢结构通用规范GB 55006-2021.pdf",
+    "location": "通用规范原文",
+    "summary": "用于强制性要求核查；与其他标准不一致时，按住建部公告采用本规范要求。",
+    "status": "原文已收录，扫描正文待逐条核验"
+  },
+  {
+    "title": "钢结构监测技术标准",
+    "code": "T/CSCS 033-2022",
+    "category": "网上资料",
+    "url": "https://www.cnass.cn/upload/gjgfenhui/file/20230116/1673863810633982.pdf",
+    "location": "第3.2.4条说明；原文第39页附近",
+    "summary": "预警值需综合结构分析、监测前状况和荷载环境确定；监测初始值不一定是结构零应力状态。",
+    "status": "已核对网上索引相关段落，全文链接收录"
+  },
+  {
+    "title": "建筑与桥梁结构监测技术规范",
+    "code": "GB 50982-2014",
+    "category": "网上资料",
+    "url": "https://snamr.shaanxi.gov.cn/sy/ztzl/sbgxhxfpyjhx/bzcx/gjbz/202410/t20241030_3439066.html",
+    "location": "陕西省市场监督管理局公开入口",
+    "summary": "监测方案、预警及数据分析的补充参考。本次未将未核验的条款作为数值来源。",
+    "status": "官方公开入口已收录"
+  },
+  {
+    "title": "钢结构通用规范发布公告",
+    "code": "住建部2021年第69号",
+    "category": "网上资料",
+    "url": "https://www.mohurd.gov.cn/gongkai/zc/wjk/art/2021/art_17339_761191.html",
+    "location": "住建部公告",
+    "summary": "GB 55006-2021自2022年1月1日起实施，全部条文强制执行；相关规定不一致时以其规定为准。",
+    "status": "已核对官方公告"
+  },
+  {
+    "title": "异常值识别方法",
+    "code": "NIST 技术资料",
+    "category": "网上资料",
+    "url": "https://itl.nist.gov/div898/handbook/eda/section3/eda35h.htm",
+    "location": "Detection of Outliers",
+    "summary": "介绍MAD与修正Z分数识别潜在离群点；统计异常不能单独判定结构损伤。当前100/300με筛查线不由该文献给出。",
+    "status": "已核对方法说明"
+  },
+  {
+    "title": "JMZX-212HAT厂家旧版产品资料",
+    "code": "Kingmach · 旧版参数",
+    "category": "网上资料",
+    "url": "https://www.kingmach.cn/en/attachment/download/3/1806301557199821.pdf",
+    "location": "PDF第1页规格与清零功能",
+    "summary": "旧版公开资料标注量程±1500με，并说明可清零显示不同工况间的应变差。量程不是结构安全限值，也不代表达到1000με即为设备故障。",
+    "status": "已核对原文；现场型号版本、安装预张力及标定单待确认"
+  },
+  {
+    "title": "JMZX-212HAT/HB厂家现有产品参数",
+    "code": "Kingmach · 现有产品页",
+    "category": "网上资料",
+    "url": "https://kingmachmeasure.com/product-detail/1-2-smart-vibrating-wire-strain-gauge--surface-model-",
+    "location": "Specifications",
+    "summary": "现有产品页标注标准量程±2500με，与旧版参数不同，不可直接替代现场设备标定信息。900/1000με均不能作为通用仪器故障界限。",
+    "status": "已核对厂家页面；未将其直接配置为现场设备量程"
+  },
+  {
+    "title": "1000με临时线依据复核",
+    "code": "2026-10-17 · 待现场核定",
+    "category": "项目规则",
+    "url": "/app/static/knowledge/1000微应变依据复核.md",
+    "location": "区分量程、仪器故障与结构安全阈值",
+    "summary": "当前1000με仅为人工暂定关注线，无规范统一故障界限依据；不能据此认定≥1000均错误或<1000正常。现有规则尚未自动替换为另一无依据数值。",
+    "status": "复核结果已登记；需设备标定单、初始零点、测点工况及设计计算确认"
+  }
+]

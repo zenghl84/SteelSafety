@@ -1,0 +1,15 @@
+* text=auto eol=lf
+*.bat text eol=crlf
+
+# The CS19 snapshot verifies the exact bytes of the MGT model.
+*.mgt -text
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ttf binary
+*.pdf binary
+*.xlsx binary
+*.xls binary
+*.docx binary
+*.npz binary
+*.npy binary

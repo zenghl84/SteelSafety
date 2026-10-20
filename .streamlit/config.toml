@@ -1,0 +1,11 @@
+[theme]
+base = "light"
+primaryColor = "#176AC4"
+
+[server]
+enableStaticServing = true
+address = "127.0.0.1"
+headless = true
+
+[browser]
+gatherUsageStats = false

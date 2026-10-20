@@ -1,0 +1,23 @@
+<div id="alerts-workspace" hidden>
+  <div class="aw-toolbar">
+    <div><span class="aw-eyebrow">风险监测 · 依据可追溯</span><h3>关键风险源处置台</h3><p>查看风险的触发依据、数据来源与建议处置。</p></div>
+    <div class="sa-actions"><label for="alerts-source">数据来源</label><select id="alerts-source" aria-label="预警数据来源"><option value="confirmed">已确认评分表</option><option value="monitoring">最新监测记录</option></select><button id="alerts-export" type="button">导出风险详情</button></div>
+  </div>
+  <div class="aw-summary" aria-label="当前风险汇总">
+    <article class="aw-total"><small>待处理复核项</small><strong id="alerts-count">—</strong><span>与首页关键风险源同步</span></article>
+    <article><small>设备故障</small><strong id="alerts-equipment-count">—</strong><span>检修设备，恢复有效监测</span></article>
+    <article><small>应力关注 / 预警</small><strong id="alerts-stress-count">—</strong><span>按当前评分规则筛查</span></article>
+    <article><small>有效测点覆盖</small><strong id="alerts-coverage">—</strong><span id="alerts-coverage-note">—</span></article>
+  </div>
+  <div class="aw-snapshot"><span class="aw-snapshot-dot"></span><b id="alerts-snapshot-label"></b><span id="alerts-snapshot-time"></span><small>快照复核 · 首次触发时间未记录</small></div>
+  <div class="aw-main">
+    <section class="aw-list-panel" aria-labelledby="alerts-list-title">
+      <div class="aw-list-heading"><h3 id="alerts-list-title">风险源清单</h3><span id="alerts-filter-count"></span></div>
+      <div class="aw-filters" role="group" aria-label="筛选风险类型"><button data-alert-filter="all" class="active" aria-pressed="true">全部</button><button data-alert-filter="equipment" aria-pressed="false">设备故障</button><button data-alert-filter="stress" aria-pressed="false">应力复核</button><button data-alert-filter="data" aria-pressed="false">缺测</button></div>
+      <div id="alerts-list" aria-label="选择风险源查看详情"></div>
+      <p class="aw-list-note">每个测点计一项。当前状态为待检修或待复核，需完成现场工作后再确认处置。</p>
+    </section>
+    <section id="alerts-detail" class="aw-detail" aria-label="风险源详情" aria-live="polite" tabindex="-1"></section>
+  </div>
+  <p class="aw-footnote" id="alerts-note"></p>
+</div>

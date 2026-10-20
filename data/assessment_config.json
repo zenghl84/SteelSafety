@@ -1,0 +1,20 @@
+{
+  "version": "stress-score-v0.2",
+  "baseline_stage": "CS18",
+  "elastic_modulus_mpa": 206000,
+  "confirmed_source": "用户确认的安装初值与实测应力增量表",
+  "confirmed_at": "2026-10-18",
+  "confirmed_measurement_time": null,
+  "component_note": "S7、S8 已由用户确认：CS18 初值与实测增量对应同一位置、同一方向的表面正应力。",
+  "sensors": [
+    {"sensor_id":"S1","element":11368,"end":"J","material":"Q235B","initial_mpa":-179,"reference_mpa":215,"component":"纵向正应力","confirmed_delta_mpa":-292.7882,"sensor_status":"damaged","sensor_status_label":"传感器损坏","status_reported_by":"用户标记","status_recorded_at":"2026-10-18","sensor_status_note":"按用户要求记录传感器损坏；原始读数与原映射分保留，不参与有效测点受力判断。"},
+    {"sensor_id":"S2","element":5545,"end":"J","material":"Q235B","initial_mpa":-171,"reference_mpa":215,"component":"纵向正应力","confirmed_delta_mpa":7.4271},
+    {"sensor_id":"S3","element":5879,"end":"I","material":"Q235B","initial_mpa":132,"reference_mpa":215,"component":"纵向正应力","confirmed_delta_mpa":-13.5230},
+    {"sensor_id":"S5","element":10341,"end":"I","material":"Q235B","initial_mpa":130,"reference_mpa":215,"component":"纵向正应力","confirmed_delta_mpa":7.5797},
+    {"sensor_id":"S6","element":4437,"end":"J","material":"Q235B","initial_mpa":129,"reference_mpa":215,"component":"纵向正应力","confirmed_delta_mpa":6.5283},
+    {"sensor_id":"S7","element":4540,"end":"I","material":"Q235B","initial_mpa":26.1,"reference_mpa":215,"component":"同向表面正应力","confirmed_delta_mpa":4.7726},
+    {"sensor_id":"S8","element":10443,"end":"J","material":"Q235B","initial_mpa":27,"reference_mpa":215,"component":"同向表面正应力","confirmed_delta_mpa":9.9528},
+    {"sensor_id":"S9","element":4429,"end":"I","material":"Q355B","initial_mpa":-124,"reference_mpa":305,"component":"纵向正应力","confirmed_delta_mpa":34.8680},
+    {"sensor_id":"S10","element":10334,"end":"J","material":"Q355B","initial_mpa":-129,"reference_mpa":305,"component":"纵向正应力","confirmed_delta_mpa":-8.3240}
+  ]
+}
